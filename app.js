@@ -1,9 +1,8 @@
 const express = require('express');
 const path = require('path')
 const app = express();
-const puerto=3000
 
-app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + 'public'));
 
 /* En caso de NO utilizar Heroku, usar esto
 app.listen(puerto, () => {
