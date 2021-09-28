@@ -1,0 +1,26 @@
+{
+  "name": "mercado-liebre-larroulet",
+  "version": "1.0.0",
+  "description": "mercado liebre digital house",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start" : "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaciqueLarru/mercadoliebre.git"
+  },
+  "keywords": [
+    "mercadoliebre"
+  ],
+  "author": "CaciqueLarru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaciqueLarru/mercadoliebre/issues"
+  },
+  "homepage": "https://github.com/CaciqueLarru/mercadoliebre#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
