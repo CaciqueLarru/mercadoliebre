@@ -1,0 +1,55 @@
+
+  /*BODY */
+  
+.price {
+  font-size: 18px;
+}
+
+.discount {
+  font-size: 16px;
+}
+
+.icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #1259c3;
+}
+
+#truck{
+ color: #39b54a;
+}
+
+  
+  .body {
+    background-color: #ebebeb;;
+  }
+
+  .body image {
+    align-content: center;
+  }
+
+  .offers {
+    display: flex;
+
+    /*completar */
+  }
+
+  .product {
+    margin-bottom: 10px;
+  }
+
+main section article i,
+  .discount {
+    color: #39b54a;
+    font-weight: 300;
+  }
+
+  .description {
+    font-size: 16px;
+    display:none;
+  }
+  
+
+
+  
+

@@ -3,8 +3,6 @@ const multer = require ('multer');
 const path = require('path');
 
 
-
-
 /*Impementación Multer*/
 
 const storage = multer.diskStorage ({
@@ -20,15 +18,28 @@ const upload = multer ({storage});
 router.post('/', upload.single ('image'));   
 
 
-
-
-
 /*Controller del producto */
 
 const productsController = {
-    detail: (req,res) => {
-        res.render("products/productDetail")
+    
+   home: (req,res) => {
+        res.render("products/homeProduct")
    },
+   detail: (req,res) => {
+        //res.render("products/productDetail")
+        res.send("bienvenidos al detalle del producto " + req.params.idProducto);
+   },
+   reviews: (req,res) => {
+    if (req.params.idComentario == undefined) {
+        res.send ("Bienvenidos a los comentarios del producto" + req.params.idProducto);
+    } else {
+        res.send ("Bienvenidos a los comentarios del producto " + req.params.idProducto + " y estas enfocado en el comentario " + req.params-idComentario)
+    }
+    },
+    form: (req, res) => {
+        res.send("Crear Formulario");
+    },
+    /*
     cart: (req,res) => {
          res.render("products/productCart")
     },
@@ -51,7 +62,7 @@ const productsController = {
     create: (req,res) => {
         res.render("products/createProduct")
    },
-   /*Creamos el producto que vamos a subir con muller */
+   /*Creamos el producto que vamos a subir con muller 
 
 store (req,res) {
     let product = {
@@ -60,21 +71,18 @@ store (req,res) {
         image: req.file.filename || 'default-image.png'
     }
     return res.send (req.file.filename);
-   
-   /*Agregamos el nuevo producto */
+
+   /*Agregamos el nuevo producto 
    
    products.push(product);
 
-   /*Pasamos a JSON todos los productos y sobreescribimos la db */
+   /*Pasamos a JSON todos los productos y sobreescribimos la db 
 
    let jsonDeProductos = JSON.stringify (products, null, 4);
    fs.writeFileSync(path.resolve(__dirname,'../db/products.js'),jsonDeProductos);
 
    res.redirect('/');
-},
-edit: function (req,res) {
-    let productoEditor
-}
+}, */
 
 };
 
